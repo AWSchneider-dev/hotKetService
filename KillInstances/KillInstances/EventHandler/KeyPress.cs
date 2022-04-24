@@ -222,8 +222,8 @@ namespace KillInstances
     public static bool ForwardSlash_KeyPressed { get => forwardSlash_Key; set => forwardSlash_Key = value; }
     #endregion
 
-    private static Keyd keyd = null;
-    private static List<HotKey> hotKey = null;
+    private static Keyd keyd = new Keyd();
+    private static List<HotKey> hotKey = new List<HotKey>();
     public static Keyd Keyd { get => keyd; set => keyd = value; }
     public static List<HotKey> HotKey { get => hotKey; set => hotKey = value; }
     public static int KeyPressCount { get => keyPressCount; set => keyPressCount = value; }
@@ -355,7 +355,6 @@ namespace KillInstances
         }
         keyd.keyd.Add(e);
       }
-      //return value;
     }
 
     //public static class LetterHandler

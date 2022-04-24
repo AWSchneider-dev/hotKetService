@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace KillInstances
 {
-  public static class Commands
+  public class Commands
   {
-    public static void StartCommand(List<System.Windows.Forms.Keys> keys)
+    public void StartCommand(object keys)
     {
       CreateCommand(keys);
       ExecuteCommand(keys);
     }
 
-    private static void CreateCommand(List<System.Windows.Forms.Keys> keys)
+    private void CreateCommand(object keys)
     {
 
     }
 
-    private static void ExecuteCommand(List<System.Windows.Forms.Keys> keys)
+    private void ExecuteCommand(object keys)
     {
       // Generalize creation of executing object and wrapping all calls in an invoke()
     }
