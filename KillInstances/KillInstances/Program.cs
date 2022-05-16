@@ -1,3 +1,4 @@
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,8 @@ namespace KillInstances
         {
           Application.EnableVisualStyles();
           Application.SetCompatibleTextRenderingDefault(false);
+
+          var json = Newtonsoft.Json.JsonConvert.SerializeObject(new HotKey());
 
           LowLevelKeyBoardHook kbh = new LowLevelKeyBoardHook();
           KeyPressPowerShellEventHandler keyPressHanlder = new KeyPressPowerShellEventHandler();

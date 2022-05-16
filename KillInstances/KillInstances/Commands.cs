@@ -8,20 +8,27 @@ namespace KillInstances
 {
   public class Commands
   {
-    public void StartCommand(object keys)
+    public void StartCommand(HotKey keys)
     {
       CreateCommand(keys);
       ExecuteCommand(keys);
     }
 
-    private void CreateCommand(object keys)
+    private void CreateCommand(HotKey keys)
     {
 
     }
 
-    private void ExecuteCommand(object keys)
+    private void ExecuteCommand(HotKey keys)
     {
-      // Generalize creation of executing object and wrapping all calls in an invoke()
+      // HotKey JSON
+      // {"enumAction":null,"keys":null,"hotKeyName":null,"context":null}
+
+
+      //if(keys.Action. = HotKey.Action.ExecLocalPwsh)
+      //{
+
+      //}
     }
   }
 }

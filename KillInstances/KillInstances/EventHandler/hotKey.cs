@@ -3,8 +3,9 @@ using System.Windows.Forms;
 
 namespace KillInstances
 {
-  internal class HotKey
+  public class HotKey
   {
+    public object enumAction;
     public List<Keys> keys { get; set; }
     public string hotKeyName { get; set; }
 
@@ -32,5 +33,17 @@ namespace KillInstances
       ExecLocalPy
     };
     public object context { get; set; }
+
+    public void setProgAction(Action action)
+    {
+      enumAction = action;
+    }
+    public Action GetAction()
+    {
+      Action result = Action.ExecLocalPwsh;
+      if (!enumAction.Equals(null)) result = (Action)enumAction;
+
+      return result;
+    }
   }
 }
